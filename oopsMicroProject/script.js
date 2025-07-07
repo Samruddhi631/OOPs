@@ -80,7 +80,7 @@ class Sim{
         this.balance=balance;
     }
     addBalance(balance){
-        if(balane<0){
+        if(balance<0){
             console.log("to add balance give amount greater then zero");
             return
         }
