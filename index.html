@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub User Search</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-purple-800 min-h-screen flex items-center justify-center font-sans">
+
+  <div class="w-full max-w-xl px-6">
+    <!-- Search Box -->
+    <div class="flex items-center bg-purple-700 rounded-full overflow-hidden shadow-lg">
+      <input 
+      id="text"
+        type="text" 
+        placeholder="Search GitHub user..." 
+        class="flex-1 px-6 py-4 text-white bg-transparent placeholder-gray-300 focus:outline-none"
+      />
+      <button id="search" class="bg-white text-purple-800 font-semibold px-6 py-3 rounded-full m-1 transition duration-300 hover:bg-gray-100">
+        Search
+      </button>
+    </div>
+
+    <!-- Output / Suggestion Box -->
+    <div id="data" class="mt-6 bg-purple-900 rounded-xl p-6 space-y-4 shadow-xl">
+
+  </div>
+<script src="async.js"></script>
+</body>
+</html>
