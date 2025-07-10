@@ -96,28 +96,3 @@
 //     console.log(data)
 // })
 
-let submit=document.querySelector("#search")
-let text=document.querySelector("#text")
-let div=document.querySelector("#data")
-function getData(username){
-    return fetch(`https://api.github.com/users/${username}`).then(res=>res.json())
-}
-submit.addEventListener('click',(event)=>{
-event.preventDefault();
-getData(text.value).then(data=>{
-    console.log(data)
-    div.innerHTML=`
-            <img src="${data.avatar_url}" width="100" alt="Avatar">
-            <h2>${data.name || data.login}</h2>
-            <p><strong>Username:</strong> ${data.login}</p>
-            <p><strong>Location:</strong> ${data.location || 'N/A'}</p>
-            <p><strong>Public Repos:</strong> ${data.public_repos}</p>
-            <p><strong>Followers:</strong> ${data.followers}</p>
-            <p><a href="${data.html_url}" target="_blank">View Profile</a></p>
-        `;
-        div.style.color="black"
-}).catch(error => {
-        div.innerHTML = `<p style="color:red;">User not found or error occurred</p>`;
-        console.error(error);
-    });
-})

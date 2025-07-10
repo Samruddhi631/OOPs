@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub User Search</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-950 text-white font-sans min-h-screen flex items-center justify-center font-sans">
+
+  <div class="w-full max-w-xl px-6">
+    <!-- header -->
+     <header class="text-center">
+      <h1 class="fon-bold text-4xl tracking-tight">Github User Finder</h1>
+      <p class="text-gray-400 text-sm mt-2">Search and view Github User Profile</p>
+     </header>
+    <!-- Search Box -->
+    <div class="flex items-center bg-gray-800 hover:border-blue-800  rounded-full border border-gray-600 overflow-hidden mt-2 shadow-lg">
+      <input 
+      id="text"
+        type="text" 
+        placeholder="Search GitHub user..." 
+        class="flex-1 px-6 py-4 text-white bg-transparent placeholder-gray-300 focus:outline-none"
+      />
+      <button id="search" class="bg-green-700  hover:bg-green-800 active:scale-[0.1] font-semibold px-6 py-3 rounded-full m-1 transition duration-300 hover:bg-gray-100">
+        Search
+      </button>
+    </div>
+
+    <!-- Output / Suggestion Box -->
+    <div id="result" class="mt-8 bg-gray-900 rounded-2xl border border-gray-600 shadow-xl p-6 text-white flex flex-col md:flex-row items-center space-y-3 md:space-y-0 md:space-x-8">
+    <!-- Avatar -->
+      <div class="w-24 h-24 bg-gray-700 rounded-full animate-pulse"></div>
+      <!-- Info -->
+        <div class="space-y-2 flex-1">
+          <h2 class="text-x1 font-semibold bg-gray-700 h-6 w-1L3 rounded animate-pulse"></h2>
+          <p class="bg-gray-700 h-4 w-2/3 rounded animate-pulse"></p>
+          <div class="flex flex-wrap gap-4 mt-4">
+            <div class="bg-gray-700 h-4 w-20 rounded animate-pulse"></div>
+            <div class="bg-gray-700 h-4 w-16 rounded animate-pulse"></div>
+            <div class="bg-gray-700 h-4 w-24 rounded animate-pulse"></div>
+          </div>
+        </div>
+  </div>
+  <!-- fotter  -->
+      <footer class="text-xs text-center text-gray-500 mt-10">
+        Built with 💗 using Tailwind CSS
+      </footer>
+<script src="script.js"></script>
+</body>
+</html>
